@@ -28,7 +28,7 @@ class teamTable extends Component {
         //     )
         //
         // });
-
+        //
         // var teamPosition = this.props.team.map(function (team) {
         //     return (
         //         <TableRow>
@@ -48,7 +48,7 @@ class teamTable extends Component {
 
         return (
             <Card>
-                <h1>{this.props.team.name}</h1>
+                {/*<h1>{this.props.team.name}</h1>*/}
                 {/*<Table>*/}
                     {/*<TableHeader displaySelectAll={false}>*/}
                         {/*{tableColumns}*/}
@@ -57,8 +57,7 @@ class teamTable extends Component {
                         {/*{teamPosition}*/}
                     {/*</TableBody>*/}
                 {/*</Table>*/}
-
-                <h1> TEAM TABLE </h1>
+                <h1>TESTING</h1>
             </Card>
         );
     }
