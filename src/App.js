@@ -18,8 +18,11 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <MuiThemeProvider>
-                    <Navbar />
-                    <Main />
+                    <div>
+                        <Navbar />
+                        <Main />
+                        <div>HELLO</div>
+                    </div>
                 </MuiThemeProvider>
             </BrowserRouter>
         );

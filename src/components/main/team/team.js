@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class team extends Component {
+class Team extends Component {
     render() {
         return (
             <h1> Team page </h1>
@@ -8,4 +8,4 @@ class team extends Component {
     }
 }
 
-export default team;
+export default Team;
