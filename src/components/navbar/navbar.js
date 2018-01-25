@@ -13,34 +13,6 @@ import Homepage from '../main/homepage/homepage';
 
 class navbar extends Component {
     render() {
-        var teams = [
-            {
-                'name': 'Barcelona',
-                'link': 'https://images.fotmob.com/image_resources/logo/teamlogo/8634.png',
-                'position': 1
-            },
-            {
-                'name': 'Atletico Madrid',
-                'link': 'https://images.fotmob.com/image_resources/logo/teamlogo/9906.png',
-                'position': 2
-            },
-            {
-                'name': 'Valencia',
-                'link': 'https://images.fotmob.com/image_resources/logo/teamlogo/10267.png',
-                'position': 3
-            },
-            {
-                'name': 'Villarreal',
-                'link': 'https://images.fotmob.com/image_resources/logo/teamlogo/10205.png',
-                'position': 4
-            },
-            {
-                'name': 'Real Madrid',
-                'link': 'https://images.fotmob.com/image_resources/logo/teamlogo/8633_small.png',
-                'position': 5
-            }
-        ];
-
         var leagues = [
             {
                 'name': 'Bundesliga',
@@ -64,8 +36,10 @@ class navbar extends Component {
             }
         ].map(function (league) {
                 return (
-                    <Tab key={league.code} label={league.name} containerElement={<Link to={`/leagues/${league.code}`}/>}>
-                        <Teamtable team={teams}/>
+                    <Tab key={league.code}
+                         label={league.name}
+                         containerElement={<Link to={`/leagues/${league.code}`}/>}
+                    >
                     </Tab>
                 )
             }

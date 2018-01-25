@@ -21,7 +21,6 @@ class App extends Component {
                     <div>
                         <Navbar />
                         <Main />
-                        <div>HELLO</div>
                     </div>
                 </MuiThemeProvider>
             </BrowserRouter>
