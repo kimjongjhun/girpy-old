@@ -10,9 +10,6 @@ import {
 import Navbar from './components/navbar/navbar';
 import Main from './components/main/main';
 
-// Styles
-import './App.css';
-
 class App extends Component {
     render() {
         return (

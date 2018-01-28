@@ -1,0 +1,9 @@
+.cardContainer {
+    column-count: 5;
+    margin: 55px;
+}
+
+.homepageCards {
+    text-align: center;
+    margin: 10px;
+}

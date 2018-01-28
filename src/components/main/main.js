@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-    BrowserRouter,
     Switch,
     Route
 } from 'react-router-dom';
@@ -39,17 +38,17 @@ class Main extends Component {
             }
         ];
 
-        const teamTableObject = (teams) => {
+        const teamTableObject = () => {
             return (
-                <Teamtable team={teams}></Teamtable>
+                <Teamtable team={teams}/>
             )
         };
 
         return (
             <Switch>
-                <Route exact path='/' component={Homepage}></Route>
-                <Route path='/leagues/:id' component={teamTableObject}></Route>
-                <Route path='/teams/:id' component={Team}></Route>
+                <Route exact path='/' component={Homepage}/>
+                <Route path='/leagues/:id' component={teamTableObject}/>
+                <Route path='/teams/:id' component={Team}/>
             </Switch>
         )
     }

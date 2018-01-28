@@ -1,15 +1,7 @@
 // Third party
 import React, {Component} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import {
-    BrowserRouter,
-    Route,
-    Link
-} from 'react-router-dom'
-
-// Mine
-import Teamtable from '../main/teamtable/teamtable';
-import Homepage from '../main/homepage/homepage';
+import {Link} from 'react-router-dom'
 
 class navbar extends Component {
     render() {
@@ -35,15 +27,15 @@ class navbar extends Component {
                 'code': '567'
             }
         ].map(function (league) {
-                return (
-                    <Tab key={league.code}
-                         label={league.name}
-                         containerElement={<Link to={`/leagues/${league.code}`}/>}
-                    >
-                    </Tab>
-                )
-            }
-        );
+            return (
+                <Tab key={league.code}
+                     label={league.name}
+                     containerElement={<Link to={`/leagues/${league.code}`}/>}
+                >
+                </Tab>
+            )
+
+        });
 
         return (
             <Tabs>
