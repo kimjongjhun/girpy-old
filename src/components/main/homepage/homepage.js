@@ -79,6 +79,7 @@ class Homepage extends Component {
             <GridList
                 cellHeight={250}
                 cols={5}
+                padding={5}
             >
                 {teams}
             </GridList>
