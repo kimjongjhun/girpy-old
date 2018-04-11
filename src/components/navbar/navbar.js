@@ -1,47 +1,59 @@
 // Third party
 import React, {Component} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Main from '../main/main';
+import Homepage from '../main/homepage/homepage';
 
 class navbar extends Component {
     render() {
-        var leagues = [
+        const leagueTabs = [];
+        const leagues = [
             {
                 'name': 'Bundesliga',
-                'code': '123'
+                'id': 452
             },
             {
                 'name': 'La Liga',
-                'code': '234'
+                'id': 455
             },
             {
                 'name': 'Ligue 1',
-                'code': '345'
+                'id': 450
             },
             {
                 'name': 'Premier League',
-                'code': '456'
+                'id': 445
             },
             {
                 'name': 'Serie A',
-                'code': '567'
+                'id': 456
+            },
+            {
+                'name': 'UCL',
+                'id': 464
             }
-        ].map(function (league) {
-            return (
-                <Tab key={league.code}
-                     label={league.name}
-                     containerElement={<Link to={`/leagues/${league.code}`}/>}
-                >
-                </Tab>
-            )
-
-        });
+        ]
+            .forEach(function (league) {
+                leagueTabs.push(
+                    <Tab key={league.id}
+                         label={league.name}
+                         containerElement={<Link to={`/leagues/${league.id}`}/>}
+                    >
+                        <Main league={league}/>
+                    </Tab>
+                )
+            });
 
         return (
-            <Tabs>
-                <Tab label="Girpy" containerElement={<Link to="/"/>}></Tab>
-                {leagues}
-            </Tabs>
+            <div>
+                <Tabs>
+                    <Tab label="Girpy" containerElement={<Link to="/"/>}>
+                        <Homepage/>
+                    </Tab>
+                    {leagueTabs}
+                </Tabs>
+            </div>
         );
     }
 }

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-// import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import {GridList, GridTile} from 'material-ui/GridList';
-
 import './homepage.css';
 
 class Homepage extends Component {
@@ -69,9 +67,9 @@ class Homepage extends Component {
             },
         ].map(function (team) {
             return (
-                    <GridTile title={team.name}>
-                        <img src={team.crest} />
-                    </GridTile>
+                <GridTile title={team.name}>
+                    <img src={team.crest}/>
+                </GridTile>
             )
         });
 
