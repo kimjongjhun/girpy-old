@@ -1,9 +1,9 @@
 import Request from 'request';
+import _ from 'lodash';
 
-// const request = new Request();
 const baseUri = 'http://api.football-data.org/v1/';
 
-let leagueData = [];
+let leagueData = {};
 let teamPlayers;
 let teamFixtures;
 
@@ -24,7 +24,7 @@ const Data = {
     // League Level
     getLeagueTable: function(id) {
         console.log('get league table hit');
-        if (!leagueData.length) {
+        if (_.isEmpty(leagueData)) {
             console.log('getting league data');
             Request(
                 {
@@ -42,8 +42,8 @@ const Data = {
                 }
             );
         }
-
-        return leagueData[id];
+        console.log('return league data', leagueData);
+        return leagueData;
         // http://api.football-data.org/v1/competitions/competitionId/leagueTable
     },
 

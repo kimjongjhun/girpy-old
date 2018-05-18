@@ -33,17 +33,18 @@ class navbar extends Component {
                 'name': 'UCL',
                 'id': 464
             }
-        ]
-            .forEach(function (league) {
-                leagueTabs.push(
-                    <Tab key={league.id}
-                         label={league.name}
-                         containerElement={<Link to={`/leagues/${league.id}`}/>}
-                    >
-                        <Main league={league}/>
-                    </Tab>
-                )
-            });
+        ];
+
+        // leagues.forEach(function (league) {
+        //         leagueTabs.push(
+        //             <Tab key={league.id}
+        //                  label={league.name}
+        //                  containerElement={<Link to={`/leagues/${league.id}`}/>}
+        //             >
+        //                 <Main league={league}/>
+        //             </Tab>
+        //         )
+        //     });
 
         return (
             <div>
@@ -52,6 +53,18 @@ class navbar extends Component {
                         <Homepage/>
                     </Tab>
                     {leagueTabs}
+                    <Tab key='452'
+                         label='Bundesliga'
+                         containerElement={<Link to={`/leagues/452`}/>}
+                    >
+                        <Main league={leagues[0]}/>
+                    </Tab>
+                    <Tab key='455'
+                         label='La Liga'
+                         containerElement={<Link to={`/leagues/455`}/>}
+                    >
+                        <Main league={leagues[1]}/>
+                    </Tab>
                 </Tabs>
             </div>
         );

@@ -11,11 +11,17 @@ import {
 import {Data} from '../../data/data';
 
 let teamPosition;
-let leagueData;
+let leagueData = {};
+let leagueCaption;
 
 class LeagueTable extends Component {
     componentDidUpdate() {
+        let id = this.props.team.id;
         console.log('component did update', leagueData);
+        leagueData = Data.getLeagueTable(this.props.team.id);
+        console.log('cdu', leagueData[id]);
+        leagueCaption = leagueData[id].leagueCaption;
+        console.log(leagueCaption);
         // teamPosition = leagueData.standing.map(function(team) {
         //     return (
         //         <TableRow>
@@ -70,6 +76,7 @@ class LeagueTable extends Component {
                         {/*{teamPosition}*/}
                     </TableBody>
                 </Table>
+                {leagueCaption}
             </div>
         );
     }
