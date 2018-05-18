@@ -1,3 +1,3 @@
-# girpy
+# girpy-old
 
-Rewrite of Girpy from AngularJs to React
+old, rewriting. keeping to look back on.
